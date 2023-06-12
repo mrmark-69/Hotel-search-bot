@@ -1,4 +1,3 @@
-from peewee import *
 from database.SQLite_database import *
 
 

@@ -1,4 +1,3 @@
-from peewee import *
 from database.models.base import *
 
 

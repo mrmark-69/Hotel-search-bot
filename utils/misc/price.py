@@ -1,4 +1,3 @@
-from database import *
 from telebot.types import Message
 from utils.misc.user import get_user
 from utils.misc.distance import distance

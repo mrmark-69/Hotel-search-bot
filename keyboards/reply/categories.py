@@ -1,5 +1,4 @@
 from telebot import types
-from telebot.types import ReplyKeyboardMarkup
 
 
 def search_category() -> types.ReplyKeyboardMarkup:

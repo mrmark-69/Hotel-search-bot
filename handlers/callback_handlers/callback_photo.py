@@ -8,14 +8,14 @@ from database.SQLite_database import *
 
 
 @bot.callback_query_handler(
-    func=lambda call: call.data in ['да', 'нет'])  # Обработчик событий на нажатие
+    func=lambda call: call.data in ['yes', 'no'])  # Обработчик событий на нажатие
 # inline-кнопок "да" и "нет".
 def get_callback_2(call):
     if call.data:
-        if call.data == 'да':
+        if call.data == 'yes':
             bot.send_message(call.message.chat.id, '<b>Введите количество фото.</b>(не более 10)')
             bot.register_next_step_handler(call.message, get_photo)
-        elif call.data == 'нет':
+        elif call.data == 'no':
             with database:
                 user = get_user(call.message)
                 user.photo_num = 0

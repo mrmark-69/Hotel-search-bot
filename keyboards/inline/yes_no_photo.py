@@ -10,10 +10,10 @@ def photo_answer() -> InlineKeyboardMarkup:
     return types.InlineKeyboardMarkup(
         keyboard=[
             [
-                types.InlineKeyboardButton(text='Да', callback_data='да')
+                types.InlineKeyboardButton(text='Да', callback_data='yes')
             ],
             [
-                types.InlineKeyboardButton(text='Нет', callback_data='нет')
+                types.InlineKeyboardButton(text='Нет', callback_data='no')
             ]
         ]
     )

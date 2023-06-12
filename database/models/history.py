@@ -1,7 +1,5 @@
-from peewee import *
 from database.models.base import *
 from datetime import datetime
-# from database.models.user import *
 
 
 class History(BaseModel):

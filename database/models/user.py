@@ -1,5 +1,3 @@
-from peewee import *
-from database.SQLite_database import *
 from database.models.base import *
 from datetime import datetime
 

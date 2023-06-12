@@ -12,7 +12,7 @@ def get_photo(message: Message):
         if int(message.text) > 10:
             message.text = '10'
             bot.send_message(message.chat.id,
-                             f'<b>Максимальное количество фото - 10. Будет показано {message.text} фото.</b>')
+                             f'<b>Максимальное количество фото - 10. Будет показано по {message.text} фото.</b>')
             with database:
                 user = get_user(message)
                 user.photo_num = 10
@@ -32,7 +32,7 @@ def get_photo(message: Message):
                 command = user.command
                 user.save()
             bot.send_message(message.chat.id,
-                             f'<b>Будет показано {message.text} фото.</b>')
+                             f'<b>Будет показано по {message.text} фото.</b>')
             if command == '/highprice':
                 high_output_photo(bot=bot, message=message)
             elif command == '/lowprice':
